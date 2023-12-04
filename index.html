@@ -43,15 +43,25 @@
 	function slideShow() 
 	{ 
 	// массив картинок
-	ris = new Array('img/car1.jpg', 'img/car2.jpg', 'img/car3.jpg', 'img/car4.jpg'); 
-	// Проверяем, Не вышел ли счётчик за пределы массива 
-	if (i >= 4) i = 0; // если вышел, обнуляем счётчик.
-	//переменная r объект с именем slide
-	r=document.getElementById('slide')
-	// Меняем свойство src этого объекта на элемент из массива
-	r.src=ris[i];
-	i++; // Увеличиваем счётчик
-}
+	car_img = new Array('img/car1.jpg', 'img/car2.jpg', 'img/car3.jpg', 'img/car4.jpg'); 
+	car_img = document.getElementById('slide');
+      if (car_img.src.indexOf(car_imgs[0]) >= 0) {
+        car_img.src = car_imgs[1];
+        car_img.alt = "Киа Рио";
+      }
+      else if (car_img.src.indexOf(car_imgs[1]) >= 0) {
+        car_img.src = car_imgs[2];
+        car_img.alt = "Рено Дастер";
+      }
+      else if (car_img.src.indexOf(car_imgs[2]) >= 0) {
+        car_img.src = car_imgs[3];
+        car_img.alt = "Рено Логан";
+      }
+      else {
+        car_img.src = car_imgs[0];
+        car_img.alt = "Хундай Солярис";
+      }
+    }
 
 
 </script>
