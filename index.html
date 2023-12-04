@@ -77,6 +77,24 @@
 		{
 			
 		}
+
+
+	function animal_p_enter(animal_p_id) {
+      if (animal_p_id == 'cat_p') {
+        document.getElementById('animal_img_id').src = 'img/cat.jpg';
+        document.getElementById('animal_img_id').alt = 'Кот';
+      } else if (animal_p_id == 'dog_p') {
+        document.getElementById('animal_img_id').src = 'img/dog.jpg';
+        document.getElementById('animal_img_id').alt = 'Собака';
+      } else {
+        document.getElementById('animal_img_id').src = 'img/fish.jpg';
+        document.getElementById('animal_img_id').alt = 'Рыба';
+      }
+      document.getElementById('animal_img_id').style.visibility = 'visible';
+    }
+    function animal_p_out() {
+      document.getElementById('animal_img_id').style.visibility = 'hidden';
+    }
 </script>
 
 
@@ -118,8 +136,11 @@
 		    <p OnMouseOver = "ShowAnimal ('cat')" >Кот</p>
 		    <p OnMouseOver = "ShowAnimal('kit')">Кит</p>
 		    <p OnMouseEnter="ShowAnimal('fox')" >Лис</p>
+		    <p class="animal_p" id="cat_p" onmouseenter="animal_p_enter('cat_p');" onmouseout="animal_p_out();">КОТ</p>
+      		<p class="animal_p" id="dog_p" onmouseenter="animal_p_enter('dog_p');" onmouseout="animal_p_out();">СОБАКА</p>
+      			<p class="animal_p" id="fish_p" onmouseenter="animal_p_enter('fish_p');" onmouseout="animal_p_out();">РЫБА</p>
 	    </div>
-	    <img src ="img/cat.jpg" id ='animal' style ="visiblity: hiden;">
+	     <img src="img/cat.jpg" alt="Кот" class="animal_img" id="animal_img_id" style="visibility: hidden;">
 
     </main>
   </div> 
