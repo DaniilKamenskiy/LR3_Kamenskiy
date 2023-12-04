@@ -43,15 +43,14 @@
 	function slideShow() 
 	{ 
 	// массив картинок
-	ris = new Array('img\car1.jpg', 'img\car2.jpg', 'img\car3.jpg', 'img\car4.jpg'); 
+	ris = new Array('img/car1.jpg', 'img/car2.jpg', 'img/car3.jpg', 'img/car4.jpg'); 
 	// Проверяем, Не вышел ли счётчик за пределы массива 
-if (i >= 4) i = 0; // если вышел, обнуляем счётчик.
-//переменная r объект с именем slide
-r=document.getElementById('slide')
-// Меняем свойство src этого объекта на элемент из массива
-r.src=ris[i];
-i++; // Увеличиваем счётчик
-// вызываем эту же функцию через каждые 1500 мс
+	if (i >= 4) i = 0; // если вышел, обнуляем счётчик.
+	//переменная r объект с именем slide
+	r=document.getElementById('slide')
+	// Меняем свойство src этого объекта на элемент из массива
+	r.src=ris[i];
+	i++; // Увеличиваем счётчик
 }
 
 
