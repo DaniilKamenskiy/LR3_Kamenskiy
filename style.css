@@ -1,7 +1,4 @@
-html{
-    margin: 0;
-    padding: 15vh 0 0 0;
-}
+
 #content{
     border: 5px solid red;
     height: 70vh;
@@ -26,7 +23,7 @@ border-radius: 2px;
 	
 h1
 {
-	color: #0000ff;
+	color: #00B8A9;
 }
 
 .background1
