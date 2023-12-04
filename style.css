@@ -11,11 +11,17 @@
 
 form
 {
-	color: #00FFFF;
+color: #00FFFF;
 width: 500px;
 border: 2px;
 }
 
+
+.Borders
+{
+ border: 10px solid #2d508f;	
+}
+	
 h1
 {
 	color: #0000ff;
