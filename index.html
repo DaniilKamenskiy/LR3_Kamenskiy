@@ -66,12 +66,16 @@
 //4
 	function ShowAnimal(index)
 		{
-			if(index=='cat')
+			if(index == 'cat')
 				document.getElementByID('Animal').src ="img/cat";
-			else if(index=='kit')
+			else if(index == 'kit')
 				document.getElemetByID('Animal').src ="img/kit";
 			else
 				document.getElementByID('Animal').src ="img/fox";	
+		}
+	function ShowInVisible()
+		{
+			
 		}
 </script>
 
@@ -111,9 +115,9 @@
 	    <p>Задание 3</p>
 
 	    <form style="position: relative; left: 50px;">
-		    <input type ="text" value ="Кот" OnMouseOver="ShowAnimal('cat')" >
-		    <input type ="text" value ="Кит" OnMouseOver="ShowAnimal('kit')" >
-		    <input type ="text" value ="Лис" OnMouseOver="ShowAnimal('fox')" >
+		    <input type ="text" value ="Кот" OnMouseenter="ShowAnimal('cat')" >
+		    <input type ="text" value ="Кит" OnMouseEnter="ShowAnimal('kit')" >
+		    <input type ="text" value ="Лис" OnMouseEnter="ShowAnimal('fox')" >
 	    </form>
 	    <img src ="img/cat.jpg" id ='animal' >
 
