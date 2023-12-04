@@ -41,19 +41,20 @@
 
 
 	function slideShow() 
-	{ 	
-		var i;
-		ris = new Array('img\car4.jpg', 'img\car1.jpg'); 
-			// Проверяем, Не вышел ли счётчик за пределы массива 
-		i=0;
-		if (i >= 4) {   
-			r=document.getElementById('slide')
-			// Меняем свойство src этого объекта на элемент из массива 
-			r.src=ris[i];   
-			i++;   // Увеличиваем счётчик
-		}
-		
-	}
+	{ 
+	// массив картинок
+	ris = new Array('7.png', '8.png', '9.png', '6.png'); 
+	// Проверяем, Не вышел ли счётчик за пределы массива 
+	if (i >= 4)   i = 0; // если вышел, обнуляем счётчик. 
+	//переменная r объект с именем slide
+	r=document.getElementById('slide')
+	// Меняем свойство src этого объекта на элемент из массива 
+	r.src=ris[i];   
+	i++;   // Увеличиваем счётчик
+	// вызываем эту же функцию через каждые 1500 мс
+	setTimeout("slideShow()",1500);
+}
+
 
 </script>
 
@@ -74,7 +75,6 @@
 	<h1>Моё имущесытво</h1>
     <main>
      
-  
 	<img  src ="img\car1.jpg" OnMouseOver="fun1()" OnMouseOut="Reset()" width="200" height="100">
 	<img src ="img\car2.jpg" OnMouseOver="fun2()" OnMouseOut="Reset()" width="200" height="100">
 	<img src ="img\car3.jpg" OnMouseOver="fun3()" OnMouseOut="Reset()" width="200" height="100">
