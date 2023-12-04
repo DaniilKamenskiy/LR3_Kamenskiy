@@ -99,6 +99,23 @@
      		   car_img.src = car_imgs[0];
       		}
 		}
+
+	 function next_animal() {
+      Animals = new Array('img/cat.jpg', 'img/dog.jpg', 'img/fish.jpg'); 
+      animal = document.getElementById('animal_slide');
+      
+      if (animal.src.indexOf(Animals[0]) >= 0) {
+        animal.src = Animals[1];
+        animal.alt = 'Собака';
+      } else if (animal.src.indexOf(Animals[1]) >= 0) {
+        animal.src = Animals[2];
+        animal.alt = 'Рыба';
+      } else {
+        animal.src = Animals[0];
+        animal.alt = 'Кот';
+      }
+
+    }
 </script>
 
 
@@ -143,12 +160,16 @@
 	    </div>
 	     <img src="img/cat.jpg" id="animal_img_id" style="visibility: hidden;" width="200" height="200">
 	    <p>Задание 4</p>
-	    <form>
+	   
+	    <img id="id_animal" src="img/fox.jpg"   width="200" height="200">
+	     <form>
 	    <input type= "button" value="следующий" onclick="nextAnimal();">
 	    </form>
-	    <img src="img/fox.jpg" id="id_animal"  width="200" height="200">
 	    
-
+		   <img id="animal_slide" src="img/cat.jpg" alt="Кот" width="100px">
+   		 <form>
+      		<input type="button" value="Следующее животное" onclick="next_animal();">
+  		  </form>
     </main>
   </div> 
 </body>
