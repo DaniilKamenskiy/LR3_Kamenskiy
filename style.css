@@ -7,7 +7,7 @@ html{
     height: 70vh;
     width: 80%;
     border-radius: 15px;
-    margin: 0 auto
+    margin: 0 auto;
 }
 
 form
@@ -29,4 +29,9 @@ border-radius: 2px;
 h1
 {
 	color: #0000ff;
+}
+
+.background1
+{
+	color: #00B8A9;
 }
