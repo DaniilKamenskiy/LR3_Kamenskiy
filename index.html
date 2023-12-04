@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<style>
+body {background-color: blue;}
+</style>
+
+
+<script>
+	function fun1()
+	{	var A;
+		A = document.getElementById('img1');
+		A.value = "Модель: Ferrari 599 GTB Fiorano Стоимость: 12 800 000 Р";
+	}
+	
+
+	function fun2()
+	{	var A;
+		A = document.getElementById('img1');
+		A.value = "Модель: Ferrari F8 Spider Стоимость: 58 500 000 ₽";
+	}
+		
+	function fun3()
+	{	
+		var A;
+		A = document.getElementById('img1');
+		A.value = "Модель: Ford Mustang V Стоимость: 15 800 000 ₽";
+	}
+
+
+	function fun4()
+	{	var A;
+		A = document.getElementById('img1');
+		A.value = "Модель: Ferrari F8 Tributo Стоимость: 31 000 000 ₽";
+	}
+	
+	
+
+	function Reset()
+	{
+		var A;
+		A = document.getElementById('img1');
+		A.value = "";
+	}
+
+
+
+	function slideShow() 
+	{ 	
+		var i;
+		ris = new Array('D:\Загрузки\car4.jpg', 'D:\Загрузки\car1.jpg'); 
+			// Проверяем, Не вышел ли счётчик за пределы массива 
+		i=0;
+		if (i >= 4) {   
+			r=document.getElementById('slide')
+			// Меняем свойство src этого объекта на элемент из массива 
+			r.src=ris[i];   
+			i++;   // Увеличиваем счётчик
+		}
+		
+	}
+
+</script>
+
+
+
+
+
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>История веба - WWW</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="stylesheet" type="text/css" href="C:\Users\Даниил\Desktop\ЛР3\style.css" media="screen">
+</head>
+<body>
+&nbsp;<div class="text">
+	<h1>Моё имущесытво</h1>
+    <main>
+     
+  
+	<img  src ="D:\Загрузки\car1.jpg" OnMouseOver="fun1()" OnMouseOut="Reset()" width="200" height="100">
+	<img src ="D:\Загрузки\car2.jpg" OnMouseOver="fun2()" OnMouseOut="Reset()" width="200" height="100">
+	<img src ="D:\Загрузки\car3.jpg" OnMouseOver="fun3()" OnMouseOut="Reset()" width="200" height="100">
+	<img src ="D:\Загрузки\car4.jpg"OnMouseOver="fun4()" OnMouseOut="Reset()"  width="200" height="100">
+	
+	<form>
+		<input type = 'text' id = 'img1' value="" style="width:400px;" >
+	</form>
+
+
+
+	<img  id = 'slide' src ="D:\Загрузки\car1.jpg" width="200" height="100">
+	
+	<form>
+		<input type = "button" value = "следующая" onclick="slideShow();" >
+	</form>
+
+    </main>
+  </div> 
+</body>
+
+
+
+
+
+
+
+<style>
+{
+	body 
+	{
+		background: url("C:\Users\Даниил\Desktop\ЛР3\Фон.jpg");
+	}
+}
+</style>
+
+
+</html>
