@@ -9,11 +9,14 @@ body
   color: #222222;
 }
 
-.SizeForm
-{
-  width: 100px;
-}
 
+.thumb img  {
+    border: 2px solid #55c5e9; /* Рамка вокруг фотографии */
+    padding: 15px; /* Расстояние от картинки до рамки */
+    background: #666; /* Цвет фона */
+    margin-right: 10px; /* Отступ справа */
+    margin-bottom: 10px; /* Отступ снизу */
+   }
 .back1
 {
 border: 5px solid blue;
