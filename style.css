@@ -1,28 +1,30 @@
 
-#content{
-    border: 5px solid red;
-    height: 70vh;
-    width: 80%;
-    border-radius: 15px;
-    margin: 0 auto;
+body
+{
+  padding:  150px;
+  font-size: 14px;
+  line-height: 22px;
+  font-family: "Georgia", serif;
+  color: #222222;
 }
 
+.SizeForm
+{
+  width: 100px;
+}
 
 .back1
 {
-border: 5px solid red;
-border-radius: 2px;
+border: 5px solid blue;
+width: 40px;
 }
 
 .Borders
 {
-  padding: 0 30px;
   font-size: 16px;
   line-height: 26px;
   font-family: "Arial", sans-serif;
   color: #222222;
-
-  background: #ffffff url("img/фон.jpg") no-repeat top center;
 }	
 	
 h1
@@ -33,6 +35,5 @@ h1
 .background1
 {
 	background-color: #00B8A9;
-	width: 700;
-	height: 300;
+  padding: 50;
 }
