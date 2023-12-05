@@ -1,7 +1,7 @@
 
 body
 {
-  padding:  150px;
+  padding: 0px 150px 150px 0px;
   font-size: 14px;
   line-height: 22px;
   font-family: "Georgia", serif;
@@ -36,4 +36,26 @@ h1
 {
 	background-color: #00B8A9;
   padding: 50;
+}
+
+
+.background2
+{
+	background-color: #09d681;
+  padding: 50;
+  background-size: cover;
+}
+
+
+.background3
+{
+	background-color: #d60984;
+  padding: 50;
+}
+
+.background4
+{
+  margin-left: auto;
+  margin-right: auto;
+	background-color: #9a09de;
 }
