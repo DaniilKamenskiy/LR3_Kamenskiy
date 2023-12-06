@@ -139,6 +139,30 @@
             }
             res_label.innerHTML = res_str;
         }
+
+
+	    function distance_button_click() {
+            let res_label = document.getElementById("dist_result");
+            x = Number(document.getElementById('x1').value);
+            y = Number(document.getElementById('y1').value);
+            res = Math.sqrt(x*x + y*y);
+            if (isNaN(res)) {
+                res_label.innerHTML = 'Ошибка при вводе чисел!';
+            } else {
+                res_label.innerHTML = res;
+            }
+        }
+        function rect_button_click() {
+            let res_label = document.getElementById("rect_result");
+            x = Number(document.getElementById('x2').value);
+            y = Number(document.getElementById('y2').value);
+            res = x * y;
+            if (isNaN(res)) {
+                res_label.innerHTML = 'Ошибка при вводе чисел!';
+            } else {
+                res_label.innerHTML = res;
+            }
+        }
 </script>
 
 
