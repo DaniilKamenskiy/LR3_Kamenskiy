@@ -217,7 +217,74 @@
         print_date('birthday', birthday);
         print_daysBeforeHolidaysCount();
     }
+//11-14
+	 function showForm() {
+        if (document.getElementById("main_form") != null) { 
+            document.getElementById("main_form").remove();
+        }
 
+        var form = document.createElement("form");
+        form.setAttribute("id", "main_form");
+        
+        if (document.getElementById("blue").checked == true) {
+            id = "blue-text";
+        } else if (document.getElementById("red").checked == true) {
+            id = "red-text";
+        } else if (document.getElementById("green").checked == true) {
+            id = "green-text";
+        }
+
+        if (document.getElementById("back_color").value == "blue") {
+            form.setAttribute("style", "width: 250px; background-color: blue;");
+        } else if (document.getElementById("back_color").value == "red") {
+            form.setAttribute("style", "width: 250px; background-color: red;");
+        } else if (document.getElementById("back_color").value == "green") {
+            form.setAttribute("style", "width: 250px; background-color: green;");
+        } else {
+            form.setAttribute("style", "width: 250px;");
+        }
+
+        var br = document.createElement("br");
+        var h1 = document.createElement("h1");
+        var h1_text = document.createTextNode(document.getElementById("form_header").value); 
+        h1.appendChild(h1_text);
+        h1.setAttribute("id", id);
+
+        var img = document.createElement("img");
+        img.setAttribute("style", "width: 100px;");
+        if (document.getElementById("img_dog").checked == true) {
+            img.setAttribute("src", "img/dog.jpg");
+        } else if (document.getElementById("img_cat").checked == true) {
+            img.setAttribute("src", "img/cat.jpg");
+        } else if (document.getElementById("img_fish").checked == true) {
+            img.setAttribute("src", "img/fish.jpg");
+        } else {
+            img.setAttribute("src", "");
+            img.setAttribute("alt", "Не выбрана картинка");
+        }
+
+        var p = document.createElement("p");
+        var p_text = document.createTextNode(document.getElementById("desc").value);
+        p.appendChild(p_text);
+        p.setAttribute("id", id);
+
+        var button_close = document.createElement("button");
+        var button_close_text = document.createTextNode("Закрыть");
+        button_close.appendChild(button_close_text);
+        button_close.setAttribute("onclick", "formClose();");
+
+        //alert(h1.style);
+        form.appendChild(h1);
+        form.appendChild(img);
+        form.appendChild(p);
+        form.appendChild(button_close);
+
+        document.getElementsByTagName("body")[0].appendChild(form);
+    }
+
+    function formClose() {
+        document.getElementById("main_form").remove(); 
+    }
 </script>
 
 
@@ -327,7 +394,59 @@
     <label id="birthday"></label>
     <br>
     <label id="holidays"></label>
-			  
+
+
+
+
+
+//11-14
+	  <h1>Страничка по заказу</h1>
+    <h2></h2>
+    <label>Заголовок</label>
+    <input type="text" id="form_header">
+    <br><br><br>
+
+    <label>Картинка</label>
+    <div id="animal">
+        <input type="checkbox" id="img_dog" name="img_dog"/>
+        <label for="img_dog">Собака</label>
+    </div>
+    <div id="animal">
+        <input type="checkbox" id="img_cat" name="img_cat" />
+        <label for="img_cat">Кошечка</label>
+    </div>
+    <div id="animal">
+        <input type="checkbox" id="img_fish" name="img_fish" />
+        <label for="img_fish">Рыбка</label>
+    </div>
+    <br>
+    <label>Подпись</label>
+    <input type="text" id="desc">
+    <br>
+    <label>Цвет фона</label>
+    <select name="back_color" id="back_color">
+        <option value="blue">синий</option>
+        <option value="red">красный</option>
+        <option value="green">зелёный</option>
+    </select>
+    <br> <br>
+    <label>Цвет текста</label>
+
+    <div id="color">
+        <input type="radio" name="color" id="blue" checked/>
+        <label for="blue">синий</label>
+    </div>
+    <div id="color">
+        <input type="radio" name="color" id="red"/>
+        <label for="red">красный</label>
+    </div>
+    <div id="color">
+        <input type="radio" name="color" id="green"/>
+        <label for="green">зелёный</label>
+    </div>
+
+    <button onclick="showForm();">Показать</button> 
+    <hr>   
     </main>
   </div> 
 </body>
