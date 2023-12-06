@@ -65,7 +65,7 @@
 
 //3
 
-	function animal_p_enter(animal_p_id) {
+	function Show_animal(animal_p_id) {
       if (animal_p_id == 'cat') {
         document.getElementById('animal_img_id').src = 'img/cat.jpg';
       } else if (animal_p_id == 'fox') {
@@ -210,9 +210,9 @@
 	    <p>Задание 3</p>
        <div class="background3">
 	    <div style="position: relative; left: 50px;">
-		<p class= "back1" id="cat" onmouseenter="animal_p_enter('cat');" onmouseout="animal_p_out();">КОТ</p>
-      		<p class= "back1" id="fox" onmouseenter="animal_p_enter('fox');" onmouseout="animal_p_out();">ЛИС</p>
-      		<p class= "back1" id="kit" onmouseenter="animal_p_enter('kit');" onmouseout="animal_p_out();">КИТ</p>
+		<p class= "back1" id="cat" onmouseenter="Show_animal('cat');" onmouseout="animal_p_out();">КОТ</p>
+      		<p class= "back1" id="fox" onmouseenter="Show_animal('fox');" onmouseout="animal_p_out();">ЛИС</p>
+      		<p class= "back1" id="kit" onmouseenter="Show_animal('kit');" onmouseout="animal_p_out();">КИТ</p>
       		</div>
 	    </div>
 	     <img src="img/cat.jpg" id="animal_img_id" style="visibility: hidden;" width="200" height="200">
