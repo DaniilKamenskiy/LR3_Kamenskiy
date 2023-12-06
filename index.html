@@ -98,7 +98,7 @@
 
     }
 
-
+//5
 
 	 function arifm_button_click(sign) {
             let res_label = document.getElementById("arifm_result");
@@ -163,6 +163,61 @@
                 res_label.innerHTML = res;
             }
         }
+
+
+//6-10
+
+ function print_date(id_str, date) {
+        var weekDays = new Array('воскресенье', 'понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота');
+        var monthes = new Array('января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря');
+
+        if (id_str == 'now') {
+            res = 'Сегодня ';
+        } else if (id_str == 'birthday') {
+            res = 'Ваш день рождения в '
+        } else {
+            res = '';
+        }
+        res = res+weekDays[date.getDay()]+', '+date.getDate()+' '+monthes[date.getMonth()]+' '+date.getFullYear()+' г.';
+        document.getElementById(id_str).innerHTML = res;
+    }
+    function setBirthday() {
+        day=prompt("Введите день вашего рождения", "1");
+        month=prompt("Введите месяц вашего рождения, начиная с 0 (январь- 0-ой месяц)", "0");
+        year=prompt("Введите год вашего рождения", "2000");
+        dateBithday = new Date(year, month, day);
+        return dateBithday;
+    }
+    function livedDaysCount(birthday) {
+        var now = new Date();
+        var one_day = 24*60*60*1000;
+        return Math.round((now - birthday)/one_day)
+    }
+    function print_livedDays(birthday) {
+        var daysCount = livedDaysCount(birthday)
+        document.getElementById('daysCount').innerHTML = 'Вы прожили '+daysCount+' дня';
+    }
+    function print_daysBeforeHolidaysCount() {
+        // пусть каникулы начинаются 1 июля
+        var one_day = 24*60*60*1000;
+        var now = new Date();
+        var holidays_begin = new Date(now.getFullYear(), 6, 1);
+        if (holidays_begin < now) {
+            holidays_begin = new Date(now.getFullYear()+1, 6, 1);
+        }
+        res = Math.round((holidays_begin - now) / one_day);
+        document.getElementById('holidays').innerHTML = 'До каникул '+res+' дней';
+    }
+
+
+    function funcOnLoad() {
+        birthday = setBirthday();
+        print_date('now', new Date());
+        print_livedDays(birthday)
+        print_date('birthday', birthday);
+        print_daysBeforeHolidaysCount();
+    }
+
 </script>
 
 
@@ -222,7 +277,7 @@
    		 <form class= "Borders">
       		<input type="button" value="Следующее" onclick="nextanimal();">
   		  </form>
-  		  <div>
+	   </div>
 
 
 
@@ -262,8 +317,16 @@
     <br> <br>
     <label id="rect_result"></label>
     <br>
+//TASK 6-10
+<body onload="funcOnLoad();">
 
-
+    <label id="now"></label>
+    <br>
+    <label id="daysCount"></label>
+    <br>
+    <label id="birthday"></label>
+    <br>
+    <label id="holidays"></label>
 			  
     </main>
   </div> 
