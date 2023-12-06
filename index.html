@@ -97,6 +97,48 @@
       }
 
     }
+
+
+
+	 function arifm_button_click(sign) {
+            let res_label = document.getElementById("arifm_result");
+            x = Number(document.getElementById('x').value);
+            y = Number(document.getElementById('y').value);
+            if (sign == "+") {
+                res = x + y;
+                if (isNaN(res)) {
+                    res_str = 'Ошибка при вводе чисел!'
+                } else {
+                    res_str = 'x ' + sign + ' y = ' + res;
+                }
+            } else if (sign == "-") {
+                res = x - y;
+                if (isNaN(res)) {
+                    res_str = 'Ошибка при вводе чисел!'
+                } else {
+                    res_str = 'x ' + sign + ' y = ' + res;
+                }
+            } else if (sign == "*") {
+                res = x * y;
+                if (isNaN(res)) {
+                    res_str = 'Ошибка при вводе чисел!'
+                } else {
+                    res_str = 'x ' + sign + ' y = ' + res;
+                }
+            } else if (sign == "/") {
+                if (y != 0) {
+                    res = x / y;
+                    if (isNaN(res)) {
+                        res_str = 'Ошибка при вводе чисел!'
+                    } else {
+                        res_str = 'x ' + sign + ' y = ' + res;
+                    }
+                } else {
+                    res_str = 'На 0 делить нельзя!';
+                }
+            }
+            res_label.innerHTML = res_str;
+        }
 </script>
 
 
@@ -157,6 +199,48 @@
       		<input type="button" value="Следующее" onclick="nextanimal();">
   		  </form>
   		  <div>
+
+
+
+
+    <label for="x">x = </label>
+    <input type="text" id="x" name="x"></input>
+    <br>
+    <label for="y">y = </label>
+    <input type="text" id="y" name="y"></input>
+    <br> <br>
+    <button id="+" onclick="arifm_button_click('+');">+</button>
+    <button id="-" onclick="arifm_button_click('-');">-</button>
+    <button id="*" onclick="arifm_button_click('*');">*</button>
+    <button id="/" onclick="arifm_button_click('/');">/</button>
+    <br><br>
+    <label id="arifm_result"></label>
+    <br>
+    <hr>
+    <label for="x1">x = </label>
+    <input type="text" id="x1" name="x1"></input>
+    <br>
+    <label for="y1">y = </label>
+    <input type="text" id="y1" name="y1"></input>
+    <br> <br>
+    <button id="dist" onclick="distance_button_click();">Рассчитать расстояние</button>    
+    <br><br>
+    <label id="dist_result"></label>
+    <br>
+    <hr>
+    <label for="x2">a = </label>
+    <input type="text" id="x2" name="x2"></input>
+    <br>
+    <label for="y2">b = </label>
+    <input type="text" id="y2" name="y2"></input>
+    <br> <br>
+    <button id="rect" onclick="rect_button_click();">Рассчитать площадь</button>    
+    <br><br>
+    <label id="rect_result"></label>
+    <br>
+
+
+			  
     </main>
   </div> 
 </body>
